@@ -49,21 +49,25 @@ class ListMenuLayout implements MenuLayout {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              margin: const EdgeInsets.only(left: 10),
-                              child: item.menuImage,
+                            // Container(
+                            //   margin: const EdgeInsets.only(left: 10),
+                            //   child: item.menuImage,
+                            // ),
+                            SizedBox(width: 12),
+                            Expanded(
+                              child: Container(
+                                alignment: Alignment.centerLeft,
+                                // margin: const EdgeInsets.only(left: 10),
+                                child: Text(
+                                  item.menuTitle,
+                                  // maxLines: 1,
+                                  // overflow: TextOverflow.ellipsis,
+                                  style: item.menuTextStyle,
+                                  textAlign: item.menuTextAlign,
+                                ),
+                              )
                             ),
-                            Container(
-                              alignment: Alignment.centerLeft,
-                              margin: const EdgeInsets.only(left: 10),
-                              child: Text(
-                                item.menuTitle,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: item.menuTextStyle,
-                                textAlign: item.menuTextAlign,
-                              ),
-                            )
+                            SizedBox(width: 12),
                           ],
                         ),
                       ),
